@@ -1,0 +1,53 @@
+@require "./variables"
+
+initially-hidden()
+	opacity 0
+	pointer-events none
+	max-width 0
+	&.visible
+		opacity 1
+		pointer-events auto
+		flex-grow 1
+		max-width none
+
+with-transition()
+	transition all .3s linear
+
+with-translate()
+	transform translateX(100%)
+	&.visible
+		transform translateX(0)
+
+bordered()
+	// padding 20px 40px
+	// border 1px solid rgba(#fff, .2)
+	// border-radius 3px
+
+cover-parent()
+	position absolute
+	left 0
+	right 0
+	bottom 0
+	top 0
+
+button()
+	with-transition()
+	min-height button-height
+	line-height button-height
+	align-self center
+	border 1px solid primary-color
+	color primary-color
+	padding 0 40px
+	border-radius 7px
+	opacity .3
+	pointer-events none
+	&:not(.disabled)
+		cursor pointer
+		pointer-events auto
+		opacity 1
+		&:hover
+			background primary-color
+			color rgba(#000, .7)
+			transform scale(0.97)
+		&:active
+			transform scale(0.9)

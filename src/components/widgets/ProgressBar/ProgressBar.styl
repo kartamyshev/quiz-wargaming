@@ -1,0 +1,25 @@
+@require "../../../css/helpers/mixins.styl"
+@require "../../../css/helpers/variables.styl"
+
+.progress-bar
+	height = 20px
+	initially-hidden()
+	height height
+	border 1px solid primary-color
+	margin 20px
+	border-radius 3px
+	overflow hidden
+	position relative
+	.progress-bg
+		with-transition()
+		transition-duration .5s
+		height 100%
+		width 0%
+		background primary-color
+	.progress-info
+		cover-parent()
+		with-transition()
+		text-align center
+		font-size 13px
+		line-height height
+		color #fff

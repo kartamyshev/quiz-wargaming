@@ -1,0 +1,33 @@
+@require "../../css/helpers/mixins.styl"
+
+.result
+	bordered()
+	initially-hidden()
+	with-transition()
+	max-height 55vh
+	display flex
+	flex-direction column
+	&.visible
+		min-width primary-width
+		max-width primary-width
+	.button
+		margin 20px auto 0
+
+.result-label
+	font-size 22px
+	padding 10px
+	margin-bottom 10px
+
+.result-scrollable
+	flex-grow 1
+	overflow auto
+
+.result-item
+	padding 10px 10px 20px
+
+.result-item-question
+	font-size 19px
+	margin-bottom 10px
+
+.result-item-answer
+	font-size 14px

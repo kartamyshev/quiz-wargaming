@@ -1,0 +1,58 @@
+@require "../../css/helpers/mixins.styl"
+@require "../../css/helpers/variables.styl"
+
+.questions
+	initially-hidden()
+	with-translate()
+	with-transition()
+
+	display flex
+	justify-content center
+	flex-direction column
+	align-items center
+
+label
+	with-transition()
+	display block
+	padding 10px 20px
+	line-height 22px
+	border-radius 3px
+	cursor pointer
+
+	&:hover
+		background rgba(0, 0, 0, .15)
+	&.checked
+		background rgba(0, 0, 0, .3)
+
+	&:hover
+	&.checked
+		color primary-color
+		&:nth-child(odd)
+			transform scale(1.01) rotate(.5deg)
+		&:nth-child(even)
+			transform scale(1.01) rotate(-.5deg)
+
+	&.checked:not(label:has(input[type=checkbox]))
+		cursor default
+	input
+		margin-right 10px
+		&[type=radio]
+			display none
+
+.question-container
+	initially-hidden()
+	bordered()
+	display flex
+	flex-direction column
+	&.visible
+		min-width primary-width
+		max-width primary-width
+	.button
+		margin 20px auto
+
+
+.transition-field
+	opacity 1
+	with-transition()
+	&.in-progress
+		opacity 0

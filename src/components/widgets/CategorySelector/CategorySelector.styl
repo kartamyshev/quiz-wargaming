@@ -1,0 +1,26 @@
+@require "../../../css/helpers/mixins.styl"
+@require "../../../css/helpers/variables.styl"
+
+.category-selector
+	initially-hidden()
+	with-transition()
+
+	display flex
+	justify-content center
+	&.disappearance-mode
+		&-1
+			transform rotate(60deg)
+		&-2
+			transform rotate(-60deg)
+		&-3
+			transform rotate(360deg)
+		&-4
+			transform scale(0)
+		&-5
+			transform rotateY(90deg)
+			transition-duration 1s
+
+.category-selector-inner
+	bordered()
+	with-transition()
+	min-width primary-width
