@@ -89,7 +89,7 @@ class Questions extends React.Component {
 		let info;
 
 		if (isInitial) {
-			info = "Progess appears here";
+			info = "Progress appears here";
 		} else {
 			info = `${this.state.questionIndex} / ${this.props.questions.length}`;
 			style.opacity = opacity;

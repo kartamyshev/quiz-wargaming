@@ -13,6 +13,10 @@ class App extends React.Component {
     render() {
         return (
             <div role="main">
+                <div className="copyright">
+                    <div>Kartamyshev</div>
+                    <div>Konstantin</div>
+                </div>
                 <FluxComponent connectToStores={['main']}>
                     <CategorySelector />
                 </FluxComponent>
