@@ -1,4 +1,4 @@
-export default [
+module.exports = [
 	{
 		id: 1,
 		question: "Поддерживаете ли вы запрет на продажу алкоголя по пятницам?",

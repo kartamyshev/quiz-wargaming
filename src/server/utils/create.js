@@ -1,16 +1,16 @@
-import _ from 'lodash';
+var _ = require('lodash');
 
-export default function create(array, options) {
+module.exports = function create(array, options) {
 	options = options || {};
 	if (!_.isFunction(options.item)) {
-		options.item = (id) => {
+		options.item = function(id) {
 			return {
 				id: ++id
 			};
 		}
 	}
 	array = [];
-	_.times(options.times || 0, n => {
+	_.times(options.times || 0, function(n) {
 		array.push(options.item(n));
 	});
 	return array;

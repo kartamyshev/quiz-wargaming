@@ -1,4 +1,4 @@
-export default function() {
+module.exports = function() {
 	return {
 		categories: require('./endpoint/categories'),
 

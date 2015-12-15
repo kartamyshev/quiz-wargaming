@@ -1,3 +1,3 @@
-import create from '../utils/create';
+var create = require('../utils/create');
 
-export default create('answers');
+module.exports = create('answers');

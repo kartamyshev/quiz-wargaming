@@ -1,4 +1,4 @@
-export default [
+module.exports = [
 	{
 		id: 1,
 		question: "Какая любимая музыкальная группа Константина?",

@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config src/webpack.config.js --host 0.0.0.0 --port 8003",
-    "server": "babel-node node_modules/.bin/json-server --watch src/server/index.js -S src/server/snapshots",
+    "server": "json-server --watch src/server/index.js -S src/server/snapshots",
     "minify-index": "html-minifier dist/index.html -o dist/index.html --remove-comments --minify-js --minify-css",
     "build": "rm -rf dist/** && webpack -p --config src/webpack.config.js && npm run minify-index",
     "update-deps": "npm install utils"
