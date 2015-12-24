@@ -15,7 +15,8 @@
     "please-ajax": "^2.0.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "utils": "file:src/packages/utils"
+    "utils": "file:src/packages/utils",
+    "html-webpack-plugin": "^1.6.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
@@ -25,7 +26,6 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "html-minifier": "^0.7.2",
-    "html-webpack-plugin": "^1.6.1",
     "react-hot-loader": "^1.2.9",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.1",
