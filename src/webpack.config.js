@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var open = require('open');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var SourceMapDevToolPlugin = webpack.SourceMapDevToolPlugin;
