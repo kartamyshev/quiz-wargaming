@@ -10,8 +10,6 @@ var loaders = require('./webpack/loaders');
 var aliases = require('./webpack/aliases');
 var deps = require('./webpack/deps.js');
 
-open(DEV_URL);
-
 module.exports = {
     context: __dirname,
     entry: [
