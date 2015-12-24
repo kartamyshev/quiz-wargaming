@@ -2,13 +2,13 @@
   "author": "kartamyshev",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config src/webpack.config.js --host 0.0.0.0 --port 8003",
     "server": "json-server --watch src/server/index.js -S src/server/snapshots",
-    "minify-index": "html-minifier dist/index.html -o dist/index.html --remove-comments --minify-js --minify-css",
-    "build": "rm -rf dist/** && webpack -p --config src/webpack.config.js && npm run minify-index",
+    "start": "npm run server & webpack-dev-server --config src/webpack.config.js --host 0.0.0.0 --port 8003",
     "update-deps": "npm install utils"
   },
   "dependencies": {
+    "webpack-dev-server": "^1.10.1",
+    "json-server": "^0.8.2",
     "flummox": "^3.6.3",
     "lodash": "^3.10.1",
     "please-ajax": "^2.0.0",
@@ -25,13 +25,11 @@
     "file-loader": "^0.8.4",
     "html-minifier": "^0.7.2",
     "html-webpack-plugin": "^1.6.1",
-    "json-server": "^0.8.2",
     "open": "0.0.5",
     "react-hot-loader": "^1.2.9",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.1",
     "url-loader": "^0.5.6",
-    "webpack": "^1.11.0",
-    "webpack-dev-server": "^1.10.1"
+    "webpack": "^1.11.0"
   }
 }
